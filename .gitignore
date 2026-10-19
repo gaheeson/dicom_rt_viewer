@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.dcm
+!sample_rtplan.dcm
+!sample_rtrecord.dcm
