@@ -127,34 +127,12 @@ Unchecking a first/last spot toggle hides that marker entirely. Clearing the lab
 
 ---
 
-## Sample files
-
-| File | Description |
-|------|-------------|
-| `sample_rtplan.dcm` | Synthetic RT Ion Plan — prostate-shaped spot pattern, 2 beams × 7 energy layers |
-| `sample_rtrecord.dcm` | Matching RT Record with realistic delivery deviations (σ=0.3 mm position noise, 0.5% MU noise) — load as overlay to see deviation arrows |
-
-Generate new samples:
-
-```bash
-python make_sample_rtplan.py
-python make_sample_rtrecord.py              # default σ=0.3 mm
-python make_sample_rtrecord.py --sigma 1.5  # larger deviations for clearer arrows
-python make_sample_rtrecord.py --fraction 0 sample_rtrecord_qa.dcm  # QA record
-```
-
----
-
 ## File structure
 
 ```
-dicom_rt_viewer.py      # main application (single file, no external dependencies beyond pip)
-make_sample_rtplan.py   # generates sample_rtplan.dcm
-make_sample_rtrecord.py # generates sample_rtrecord.dcm (matched to the plan)
-sample_rtplan.dcm       # example RT Ion Plan
-sample_rtrecord.dcm     # example RT Record with delivery deviations
-README.md               # this file (English)
-README_KO.md            # Korean version
+dicom_rt_viewer.py  # main application (single file, no external dependencies beyond pip)
+README.md           # this file (English)
+README_KO.md        # Korean version
 requirements.txt
 LICENSE
 ```

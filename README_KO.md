@@ -129,34 +129,12 @@ First/Last 체크박스를 해제하면 해당 마커가 그려지지 않습니�
 
 ---
 
-## 샘플 파일
-
-| 파일 | 설명 |
-|------|------|
-| `sample_rtplan.dcm` | 합성 RT Ion Plan — 전립선 모양 스팟 패턴, 2 빔 × 7 에너지 레이어 |
-| `sample_rtrecord.dcm` | 매칭 RT Record — 위치 σ=0.3 mm, MU 0.5% 노이즈 포함 (overlay로 로드하면 deviation arrow 확인 가능) |
-
-새로 생성:
-
-```bash
-python make_sample_rtplan.py
-python make_sample_rtrecord.py              # 기본 σ=0.3 mm
-python make_sample_rtrecord.py --sigma 1.5  # 화살표를 더 크게 보이도록
-python make_sample_rtrecord.py --fraction 0 sample_rtrecord_qa.dcm  # QA record
-```
-
----
-
 ## 파일 구조
 
 ```
-dicom_rt_viewer.py      # 메인 애플리케이션 (단일 파일, pip 의존성 외 없음)
-make_sample_rtplan.py   # sample_rtplan.dcm 생성 스크립트
-make_sample_rtrecord.py # sample_rtrecord.dcm 생성 스크립트 (plan 기반)
-sample_rtplan.dcm       # 예시 RT Ion Plan
-sample_rtrecord.dcm     # 예시 RT Record (편차 포함)
-README.md               # 영문 설명서
-README_KO.md            # 한국어 설명서 (이 파일)
+dicom_rt_viewer.py  # 메인 애플리케이션 (단일 파일, pip 의존성 외 없음)
+README.md           # 영문 설명서
+README_KO.md        # 한국어 설명서 (이 파일)
 requirements.txt
 LICENSE
 ```

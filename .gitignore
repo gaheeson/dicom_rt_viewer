@@ -3,5 +3,4 @@ __pycache__/
 *.pyo
 .DS_Store
 *.dcm
-!sample_rtplan.dcm
-!sample_rtrecord.dcm
+make_sample_*.py
